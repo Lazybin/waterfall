@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <title>Yellow</title>
+
+    <style type="text/css">  
+       * { box-sizing: border-box; }
+
+
+
+		/* force scrollbar */
+		html { overflow-y: scroll; }
+
+		body { font-family: sans-serif; }
+
+		/* ---- grid ---- */
+
+		.grid {
+		  background: #DDD;
+		}
+
+		/* clear fix */
+		.grid:after {
+		  content: '';
+		  display: block;
+		  clear: both;
+		}
+
+		/* ---- .grid-item ---- */
+
+		.grid-sizer,
+		.grid-item {
+		  width: 20%;
+		}
+
+		.grid-item {
+		  float: left;
+		  cursor: pointer;
+		  background-color: white;
+          transition: all 0.3s;
+          padding:1px 1px 0 0;
+		}
+
+		.grid-item:hover{
+		  transform: scale(1.05);
+		  z-index: 1000;
+		}
+
+		.grid-item img {
+		  display: block;
+		  max-width: 100%;
+		  max-height: 100%;
+		}
+
+		.descript{
+			float:left;
+			position:absolute;
+			background:url(images/28.png);
+			margin-top: 0px;
+			height:0px;
+			width:100%;
+			overflow:hidden;
+			
+			color: white;
+		}
+
+		.descript a{ 
+			text-decoration:none; 
+			color:white;
+		}
+
+		.descript-title {
+			padding: 10px 10px 15px 10px;
+		}
+
+		.descript-title a i{
+			top:2px;
+			margin-right: 2px;
+
+		}
+
+		.descript-content {
+			padding: 0 20px 0 10px;
+		}
+		
+		
+
+    </style>  
+  </head>
+  <body>
+  	<div class="container-fluid">
+    
+		<h1>Masonry - imagesLoaded progress, vanilla JS</h1>
+
+		<div class="grid">
+		  <div class="grid-sizer"></div>
+		  <div class="grid-item">
+		  	
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528730290510&di=22e4fa1c491e3d25a9dcaa3edac1bc3a&imgtype=0&src=http%3A%2F%2Fs16.sinaimg.cn%2Fmw690%2F003uSgPizy7elksGywn8f%26690" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528730290509&di=d49a210d85f6c1ba36fb6d6361b06e00&imgtype=0&src=http%3A%2F%2Fimg1.ph.126.net%2FY0L9BIukiBA5wdmL3bHTTw%3D%3D%2F6598080217902175099.jpg" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528730290509&di=9d73f67dcabf71c1ad4ebd210347dde0&imgtype=0&src=http%3A%2F%2Fs9.sinaimg.cn%2Fmw690%2F006y1RAgzy74wIhBxsQe8%26690" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528730290509&di=2c6be067fc4676edac0f9be688bd90bd&imgtype=0&src=http%3A%2F%2Fimg0.ph.126.net%2F7rDy22Mw85_xvx5Axr4HNw%3D%3D%2F994451092736945841.jpg" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528730290507&di=fd86af2805580b29c4a15f6ad2770b72&imgtype=0&src=http%3A%2F%2Fs4.sinaimg.cn%2Fmw690%2F005CeMs3ty728Z65Zkv83%26690" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528730290509&di=d49a210d85f6c1ba36fb6d6361b06e00&imgtype=0&src=http%3A%2F%2Fimg1.ph.126.net%2FY0L9BIukiBA5wdmL3bHTTw%3D%3D%2F6598080217902175099.jpg" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=172315590,1554648246&fm=27&gp=0.jpg" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528735915165&di=16fb745a7a0619ea393e5e8e0980a176&imgtype=0&src=http%3A%2F%2Fs1.sinaimg.cn%2Fmw690%2F004lDilqzy6Vbq3f7iw50%26690" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528736034037&di=a43113fd7931f8864e0650261b778aeb&imgtype=0&src=http%3A%2F%2Fpic.feizl.com%2Fupload%2Fallimg%2F170802%2F1461wbwuirnx41.jpg" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/82/flight-formation.jpg" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1529330910&di=4d8120941b705e876055ecd1eaea1286&imgtype=jpg&er=1&src=http%3A%2F%2Fimg0.ph.126.net%2FMXUrbw0knY81o-G4RxiECg%3D%3D%2F3682255645429333008.jpg" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+		  <div class="grid-item">
+		    <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528736127111&di=b56b4d37a0aa82375b6c37c30913f7e5&imgtype=jpg&src=http%3A%2F%2Fimg3.imgtn.bdimg.com%2Fit%2Fu%3D3905912738%2C4177966292%26fm%3D214%26gp%3D0.jpg" />
+		    <div class="descript">
+		    	<div class="descript-title">
+					<span>最后一首歌曲一口气全念对一口气全念对</span>
+					<a href="javascript:;" class="pull-right">
+						<i  class="glyphicon glyphicon-thumbs-up"></i>(22)
+					</a>
+				</div>
+				<div class="descript-content">
+					<a href="javascript:;">一口气全念对</a>
+					<span class="pull-right">2018年6月11日22:47</span>
+				</div>
+			</div>
+		  </div>
+
+		</div>
+	</div>
+
+
+
+   
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/masonry.pkgd.min.js"></script>
+    <script src="./js/imagesloaded.pkgd.min.js"></script>
+    <script type="text/javascript">
+
+    
+	$('.grid-item').hover(function(){
+		//console.log($(this).children(".descript"));
+		//$(this).children(".descript").height(80);
+		$(this).children(".descript").stop().animate({"margin-top":"-80px",'height':'80px'});
+	}, function() {
+		$(this).children(".descript").stop().animate({"margin-top":"0px",'height':'0px'});
+		//this.children(".descript").stop().animate({margin-top: '-40px'});
+	});
+    
+   	var grid = document.querySelector('.grid');
+
+	var msnry = new Masonry( grid, {
+	  itemSelector: '.grid-item',
+	  columnWidth: '.grid-sizer',
+	  percentPosition: true
+	});
+
+	imagesLoaded( grid ).on( 'progress', function() {
+	  // layout Masonry after each image loads
+	  msnry.layout();
+	});
+
+    </script>
+  </body>
+</html>
